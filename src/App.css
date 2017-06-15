@@ -1,0 +1,79 @@
+body {
+  font-family: Comfortaa !important; }
+  body button, body input, body optgroup, body select, body textarea {
+    font-family: Quicksand !important; }
+
+.jumbotron {
+  background-image: url(./img/sobe.jpg);
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+  position: relative; }
+  .jumbotron h1, .jumbotron p {
+    color: white; }
+
+.btn:hover, .btn:focus {
+  cursor: pointer;
+  outline: none;
+  box-shadow: none !important; }
+
+button.circle {
+  border-radius: 50%;
+  border: 1px solid #5bc0de;
+  background-color: transparent;
+  width: 5%;
+  height: 10%;
+  transition: background-color .8s;
+  position: absolute;
+  right: 50%;
+  top: 95%; }
+  button.circle:hover {
+    cursor: pointer;
+    background-color: #5bc0de; }
+    button.circle:hover .fa-caret-down {
+      color: white;
+      border: 1px solid white;
+      border-radius: 50%;
+      padding: 3px 13px;
+      height: 43px; }
+  button.circle:focus {
+    outline: none; }
+button .fa-caret-down {
+  color: #5bc0de;
+  font-size: 2em;
+  transition: all .8s; }
+
+/* Pulse */
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); } }
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); } }
+.hvr-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent; }
+
+.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+/*# sourceMappingURL=App.css.map */
