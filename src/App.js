@@ -35,6 +35,7 @@ class App extends Component {
             <Button outline color="info">Learn More</Button>
             </p>
             {/*<button className={this.state.isToggleOn ? 'circle animated infinite pulse' : 'circle'} onMouseOver={this.hover}><i className="fa fa-caret-down"></i></button>*/}
+            {/*<button className='hvr-pulse circle'><i className="fa fa-caret-down"></i></button>*/}
             <button className='hvr-pulse'><img src={buttonDown} alt="button down"/></button>
           </Jumbotron>
         </header> 
