@@ -1,5 +1,11 @@
 $blue : #5bc0de;
 
+@mixin circle($w) {
+  width: $w;
+  height: $w;
+  background-color: rgba(251, 251, 255, 0.2);
+  transition: all .7s;
+}
 body {
     font-family: Comfortaa !important;
 
@@ -8,17 +14,13 @@ body {
     }
 }
 
-.jumbotron {
-    background-image: url(./img/sobe.jpg);
+header.container-fluid {
+    background-image: url(./img/backgroundHeader.jpeg);
     background-position: 0% 25%;
     background-size: cover;
     background-repeat: no-repeat;
     height: 90vh;
     position: relative;
-
-    h1, p {
-        color: white;
-    }
 }
 
 .btn {
@@ -29,42 +31,73 @@ body {
     }
 }
 
-button {
-    &.circle {
-        border-radius: 50%;
-        border: 1px solid $blue;
-        background-color: transparent;
-        width: 5%;
-        height: 10%;
-        transition: background-color .8s;
-        position: absolute;
-        right: 50%;
-        top: 95%;
-
-        &:hover {
-            cursor: pointer;
-            background-color: $blue;
-
-            .fa-caret-down {
-                color: white;
-                border: 1px solid white;
-                border-radius: 50%;
-                padding: 3px 13px;
-                height: 43px;
-            }
-        }
-
-        &:focus {
-            outline: none;
-        }
+.button-img {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 94%;
+    right: 45%;
+    &:focus {
+        outline: none;
     }
-
-    .fa-caret-down {
-        color: $blue;
-        font-size: 2em;
-        transition: all .8s;
+    &:hover {
+        cursor: pointer;
+    }
+    img {
+        width: 50%;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2) !important;
+        border-radius: 83%;
+        transition: box-shadow .5s;
     }
 }
+
+.fa-shopping-cart {
+    font-size: 2.3em;
+}
+
+.spot1 {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+
+}
+
+.spot2 {
+    position: absolute;
+    left: 55%;
+    top: 15%;
+
+}
+
+.circle1 {
+  &:hover {
+        cursor: pointer;
+        transform: scale( 2 ); 
+
+        .circle2 {
+            transform: scale( 1.3 );
+        }
+    }
+}
+
+.circle1,
+.circle2,
+.circle3,
+{
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle1, .circle2 {
+  @include circle(30px);
+}
+.circle3 {
+    @include circle(10px);
+    background-color: #5082ff;
+}
+
 
 /* Pulse */
 @-webkit-keyframes hvr-pulse {
@@ -94,7 +127,8 @@ button {
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
 }
-.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+// , .hvr-pulse:focus, .hvr-pulse:active
+.hvr-pulse:hover {
   -webkit-animation-name: hvr-pulse;
   animation-name: hvr-pulse;
   -webkit-animation-duration: 1s;

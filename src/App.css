@@ -3,46 +3,74 @@ body {
   body button, body input, body optgroup, body select, body textarea {
     font-family: Quicksand !important; }
 
-.jumbotron {
-  background-image: url(./img/sobe.jpg);
+header.container-fluid {
+  background-image: url(./img/backgroundHeader.jpeg);
   background-position: 0% 25%;
   background-size: cover;
   background-repeat: no-repeat;
   height: 90vh;
   position: relative; }
-  .jumbotron h1, .jumbotron p {
-    color: white; }
 
 .btn:hover, .btn:focus {
   cursor: pointer;
   outline: none;
   box-shadow: none !important; }
 
-button.circle {
-  border-radius: 50%;
-  border: 1px solid #5bc0de;
+.button-img {
   background-color: transparent;
-  width: 5%;
-  height: 10%;
-  transition: background-color .8s;
+  border: none;
   position: absolute;
-  right: 50%;
-  top: 95%; }
-  button.circle:hover {
-    cursor: pointer;
-    background-color: #5bc0de; }
-    button.circle:hover .fa-caret-down {
-      color: white;
-      border: 1px solid white;
-      border-radius: 50%;
-      padding: 3px 13px;
-      height: 43px; }
-  button.circle:focus {
+  top: 94%;
+  right: 45%; }
+  .button-img:focus {
     outline: none; }
-button .fa-caret-down {
-  color: #5bc0de;
-  font-size: 2em;
-  transition: all .8s; }
+  .button-img:hover {
+    cursor: pointer; }
+  .button-img img {
+    width: 50%;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 83%;
+    transition: box-shadow .5s; }
+
+.fa-shopping-cart {
+  font-size: 2.3em; }
+
+.spot1 {
+  position: absolute;
+  left: 30%;
+  top: 30%; }
+
+.spot2 {
+  position: absolute;
+  left: 55%;
+  top: 15%; }
+
+.circle1:hover {
+  cursor: pointer;
+  transform: scale(2); }
+  .circle1:hover .circle2 {
+    transform: scale(1.3); }
+
+.circle1,
+.circle2,
+.circle3 {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.circle1, .circle2 {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(251, 251, 255, 0.2);
+  transition: all .7s; }
+
+.circle3 {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(251, 251, 255, 0.2);
+  transition: all .7s;
+  background-color: #5082ff; }
 
 /* Pulse */
 @-webkit-keyframes hvr-pulse {
@@ -66,7 +94,7 @@ button .fa-caret-down {
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent; }
 
-.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+.hvr-pulse:hover {
   -webkit-animation-name: hvr-pulse;
   animation-name: hvr-pulse;
   -webkit-animation-duration: 1s;
