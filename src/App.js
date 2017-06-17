@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-// import { Container, Row, Col } from 'reactstrap';
+
+import { Row, Col } from 'reactstrap';
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
+// import { Button } from 'reactstrap';
+
 import buttonDown from './img/button.png';
 
 import './App.css';
@@ -35,10 +38,7 @@ class App extends Component {
 
   render() {
 
-    // // // const line = this.state.isHovered ? "line open" : "line";
-    const box = this.state.isHovered ? "box open" : "box open";
-    
-    // // // const line2 = this.state.isHovered2 ? "line2 open" : "line2";
+    const box = this.state.isHovered ? "box open" : "box ";
     const box2 = this.state.isHovered2 ? "box2 open" : "box2";
     
     return (
@@ -74,7 +74,6 @@ class App extends Component {
               </div>
             </a>
 
-            {/*<div className={line}></div>*/}
             <div className={box}>
               <h4 className='popUpTitle'>Leather Shoes</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt. Duis velit odio, imperdiet mattis neque id, vestibulum viverra tellus.</p>
@@ -89,14 +88,21 @@ class App extends Component {
               </div>
             </a>
 
-            {/*<div className={line2}></div>*/}
             <div className={box2}>
               <h4 className='popUpTitle'>Black Jeans</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt. Duis velit odio, imperdiet mattis neque id, vestibulum viverra tellus.</p>
+              <p className='pl-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt. Duis velit odio, imperdiet mattis neque id, vestibulum viverra tellus.</p>
+              {/*<Button color='primary'>Buy</Button>*/}
             </div>
 
             <button className='hvr-pulse button-img'><img src={buttonDown} alt="button down"/></button>
         </header> 
+
+        <section className="container mt-5">
+          <Row>
+            <Col lg={{ offset: 1 }}><h1 className='header-2'>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h1></Col>
+            <Col></Col>
+          </Row>
+        </section>
       </div>
     );
   }

@@ -1,4 +1,4 @@
-$blue : #5bc0de;
+$blue : #5082ff;
 @import "_mixins";
 @import "pop-ups";
 @import "hvr-effects";
@@ -17,12 +17,17 @@ a {
 }
 
 header.container-fluid {
-    background-image: url(./img/backgroundHeader.jpeg);
-    background-position: 0% 25%;
+    background-image: url(./img/backgroundHeader2.jpg);
+    background-position: 0% 35%;
     background-size: cover;
     background-repeat: no-repeat;
     height: 90vh;
     position: relative;
+}
+
+.header-2 {
+    font-family: Lato;
+    word-spacing: 5px;
 }
 
 .btn {

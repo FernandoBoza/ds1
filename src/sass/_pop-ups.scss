@@ -1,19 +1,20 @@
 .spot1 {
     position: absolute;
-    left: 30%;
-    top: 30%;
-
+    left: 43%;
+    top: 26%;
 }
 
 .spot2 {
     position: absolute;
-    left: 55%;
-    top: 15%;
-
+    left: 50%;
+    top: 50%;
 }
 
 .circle1 {
+    border: 2px solid $blue;
+    transition: border .7s;
   &:hover {
+        border: none;
         cursor: pointer;
         transform: scale( 2 ); 
 
@@ -47,48 +48,33 @@
 .box2, {
   transition: all 0.25s ease-in-out;
 }
-// .line {
-//     @include popUp();
-//     @include width-height(1px, 0px);
-//     top: 25%;
-//     left: -19.25%;
-//     &.open {
-//         @include height-opacity(80px, 1);
-//   }
-// }
+
 .box {
     @include popUp();
     @include width-height(38%, 0px);
     @include box();
-    top: 31%;
-    left: -19%;
+    top: 6%;
+    left: 16%;
     &.open {
-        @include height-opacity(30px, 1);
+        @include height-opacity(11rem, 1);
+        padding: 10px 10px;
     }
 }
 
-// .line2 {
-//     @include popUp();
-//     @include width-height(1px, 0px);
-//     top: 10.5%;
-//     left: 6.35%;
-//     &.open {
-//     @include height-opacity(80px, 1);
-//   }
-// }
 .box2 {
   @include popUp();
   @include width-height(38%, 0px);
   @include box();
-  top: 12%;
-  left: 18%;
+  top: 30%;
+  left: 22%;
   &.open {
-    @include height-opacity(10rem, 1);
+    @include height-opacity(11rem, 1);
+    padding: 10px 10px;
   }
 }
 
 .popUpTitle {
     border-bottom: 2px solid $blue;
-    width: 10rem;
+    width: 12rem;
     padding-bottom: 1rem;
 }
