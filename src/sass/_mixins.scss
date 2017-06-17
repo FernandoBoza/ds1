@@ -1,0 +1,32 @@
+@mixin circle($w) {
+  width: $w;
+  height: $w;
+  background-color: rgba(251, 251, 255, 0.2);
+  transition: all .7s;
+}
+
+@mixin popUp(){
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    opacity: 0.2;
+    // background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+@mixin width-height($w,$h){
+    width: $w;
+    height: $h;
+}
+
+@mixin box() {
+    text-align: left;
+    line-height: 30px;
+    color: white;
+    overflow: hidden;
+}
+
+@mixin height-opacity($h, $o){
+    height: $h;
+    opacity: $o;
+}
