@@ -1,7 +1,11 @@
-$blue : #5082ff;
+$blue   : #5082ff;
+$red    : #FE5A7F;
+$purple : #7D7DC5;
+
 @import "_mixins";
+@import "typography";
 @import "pop-ups";
-@import "hvr-effects";
+// @import "hvr-effects";
 
 
 body {
@@ -16,6 +20,19 @@ a {
     transition: all .5s;
 }
 
+nav {
+    li.nav-item {
+        margin-left: 1rem;
+
+        a.nav-link {
+            color: white !important;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}
+
 header.container-fluid {
     background-image: url(./img/backgroundHeader2.jpg);
     background-position: 0% 35%;
@@ -23,11 +40,8 @@ header.container-fluid {
     background-repeat: no-repeat;
     height: 90vh;
     position: relative;
-}
-
-.header-2 {
-    font-family: Lato;
-    word-spacing: 5px;
+    top: -64px;
+    // z-index: -100;
 }
 
 .btn {
@@ -60,4 +74,39 @@ header.container-fluid {
 
 .fa-shopping-cart {
     font-size: 2.3em;
+}
+
+.round-btn {
+    border-radius: 20px !important;
+}
+
+.bg-red {
+    background-color: $red;
+}
+
+.bg-blue {
+    background-color: $blue;
+}
+
+.bg-purple {
+    background-color: $purple;
+}
+
+.bg-red,
+.bg-blue,
+.bg-purple {
+    height: 35rem;
+    p { color: white}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+        border-radius: 50%
+    }
+}
+
+.hvr-underline-from-center:before {
+    background: $blue !important;
 }

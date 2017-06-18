@@ -13,7 +13,18 @@
 .circle1 {
     border: 2px solid $blue;
     transition: border .7s;
-  &:hover {
+
+    &.open { 
+        border: none;
+        cursor: pointer;
+        transform: scale( 2 );
+
+        .circle2 {
+            transform: scale( 1.3 );
+        }
+    }
+
+    &:hover {
         border: none;
         cursor: pointer;
         transform: scale( 2 ); 
@@ -73,8 +84,19 @@
   }
 }
 
+.item-num {
+    font-family: lato;
+    background-color: #5082ff;
+    display: inline;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
 .popUpTitle {
-    border-bottom: 2px solid $blue;
-    width: 12rem;
+    border-bottom: 5px solid $blue;
+    width: 19rem;
     padding-bottom: 1rem;
+    font-family: Lato;
+    letter-spacing: 2px;
 }

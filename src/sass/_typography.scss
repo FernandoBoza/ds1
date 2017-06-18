@@ -1,0 +1,40 @@
+p {
+    color: lighten(black,40%);
+}
+
+.quicksand {
+    font-family: Quicksand !important;
+}
+
+.comfortaa {
+    font-family: Comfortaa !important;
+}
+
+.lato {
+    font-family: Lato !important;
+}
+
+.header-2 {
+    font-family: 'Lobster 1.4';
+    word-spacing: 5px;
+    color: lighten(black,30%);
+}
+
+.container-fluid {
+    .header-2 {
+        color: white;
+        text-align: center;
+    }
+}
+
+.box, .box2 {
+    p{
+        color: white;
+    }
+}
+
+.text-justify {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
