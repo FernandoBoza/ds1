@@ -18,7 +18,7 @@ class App extends Component {
     this.state = {  isOpen: false, 
                     isHovered: false, 
                     isHovered2: false, 
-                    loaded : true, 
+                    loaded : true,
                   };
     
     this.toggle = this.toggle.bind(this);
@@ -160,17 +160,17 @@ class App extends Component {
           <Row>
             <Col className="bg-red">
               <img className='hvr-grow-shadow' src="http://via.placeholder.com/250x250" alt=""/>
-              <h2 className="header-2 mt-5 mb-3">Summer</h2>
+              <h2 className="header-2 mt-5 mb-3">June</h2>
               <p className='text-justify px-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt.</p>
             </Col>
             <Col className="bg-blue">
-              <h2 className="header-2 mt-5 mb-3">Summer</h2>
+              <h2 className="header-2 mt-5 mb-3">July</h2>
               <p className='text-justify px-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt.</p>
               <img className='hvr-grow-shadow' src="http://via.placeholder.com/250x250" alt=""/>
             </Col>
             <Col className="bg-purple">
               <img className='hvr-grow-shadow' src="http://via.placeholder.com/250x250" alt=""/>
-              <h2 className="header-2 mt-5 mb-3">Summer</h2>
+              <h2 className="header-2 mt-5 mb-3">August</h2>
               <p className='text-justify px-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt.</p>
             </Col>
           </Row>

@@ -141,6 +141,10 @@ body {
 a {
   transition: all .5s; }
 
+nav.nav-bg {
+  background: red; }
+nav.scrolling {
+  border: 5px solid #5082ff; }
 nav li.nav-item {
   margin-left: 1rem; }
   nav li.nav-item a.nav-link {
