@@ -35,9 +35,7 @@ class App extends Component {
 
   popState1 () {
     const {loaded, isHovered} = this.state; 
-    // check if the component was loaded
-    // which will be only once
-    // because the state is set to false
+
     if (loaded) {
         return this.setState({
           isHovered : !isHovered,
@@ -48,11 +46,6 @@ class App extends Component {
       isHovered : !isHovered
     });
   }
-//   popState1(){
-//     this.setState({
-//         isHovered: !this.state.isHovered
-//     });
-// }
   
   popState2(){
     this.setState({
@@ -65,7 +58,7 @@ class App extends Component {
     const {loaded, isHovered} = this.state;
     let box;
     let circle;
-    // first page reload
+
     if (loaded) {
       box = 'box open';
       circle = 'circle1 open'
@@ -74,7 +67,6 @@ class App extends Component {
       circle = isHovered ? 'circle1 open' : 'circle1';
     }
 
-    // const box = this.state.isHovered ? "box open" : "box";
     const box2 = this.state.isHovered2 ? "box2 open" : "box2";
     
     return (
