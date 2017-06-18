@@ -142,9 +142,18 @@ a {
   transition: all .5s; }
 
 nav.nav-bg {
-  background: rgba(0, 0, 0, 0.2); }
+  background: transparent;
+  transition: all .5s; }
 nav.scrolling {
-  background: rgba(0, 0, 0, 0.5); }
+  background: rgba(254, 90, 127, 0.7); }
+  nav.scrolling li.nav-item {
+    margin-left: 1rem; }
+    nav.scrolling li.nav-item a.nav-link {
+      color: white !important; }
+      nav.scrolling li.nav-item a.nav-link:hover {
+        color: white; }
+  nav.scrolling .hvr-underline-from-center:before {
+    background: white !important; }
 nav li.nav-item {
   margin-left: 1rem; }
   nav li.nav-item a.nav-link {

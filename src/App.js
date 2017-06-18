@@ -19,22 +19,19 @@ class App extends Component {
                     isHovered: false, 
                     isHovered2: false, 
                     loaded : true,
-                    scrollBackground: 'pt-3 sticky-top nav-bg'
+                    isTop: true,
                   };
     
     this.toggle = this.toggle.bind(this);
     this.popState1 = this.popState1.bind(this);
     this.popState2 = this.popState2.bind(this);
-    this.handleScroll = this.handleScroll.bind(this);
+   }
+
+  componentDidMount() {
+    document.addEventListener('scroll', () => {
+      this.setState({ isTop: window.scrollY < 550 })
+    });
   }
-
-
-  handleScroll(){
-    this.setState ({
-      scrollBackground: !this.state.scrollBackground
-    })
-  }
-
 
   toggle() {
     this.setState({
@@ -76,32 +73,30 @@ class App extends Component {
       circle = isHovered ? 'circle1 open' : 'circle1';
     }
 
-    const scrollBg = this.scrollBackground ? 'nav-bg scrolling' : 'nav-bg';
     const box2 = this.state.isHovered2 ? "box2 open" : "box2";
     
     return (
       <div>
-
-      <Navbar inverse toggleable className={this.state.scrollBackground} onScroll={this.handleScroll}>
-            <NavbarToggler right onClick={this.toggle} />
-            <NavbarBrand href="/">LOGO HERE</NavbarBrand>
-            <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto" navbar>
-                <NavItem>
-                  <NavLink className='hvr-underline-from-center' href="#">Home</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink className='hvr-underline-from-center' href="#">Shop</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink className='hvr-underline-from-center' href="#">About</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink className='hvr-underline-from-center' href="#"><i className="fa fa-shopping-cart mr-2" aria-hidden="true"></i> $214.00</NavLink>
-                </NavItem>
-              </Nav>
-            </Collapse>
-          </Navbar>
+      <Navbar inverse toggleable style={{ top: 0 }} className={this.state.isTop ? 'pt-3 sticky-top nav-bg' : 'pt-3 sticky-top nav-bg scrolling'}>
+        <NavbarToggler right onClick={this.toggle} />
+        <NavbarBrand href="/">LOGO HERE</NavbarBrand>
+        <Collapse isOpen={this.state.isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink className='hvr-underline-from-center' href="#">Home</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className='hvr-underline-from-center' href="#">Shop</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className='hvr-underline-from-center' href="#">About</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className='hvr-underline-from-center' href="#"><i className="fa fa-shopping-cart mr-2" aria-hidden="true"></i> $214.00</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
 
         <header className='container-fluid'>    
             <a className="spot1" onMouseEnter={this.popState1} onMouseLeave={this.popState1}>
@@ -134,7 +129,7 @@ class App extends Component {
               <p className='pl-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt. Duis velit odio, imperdiet mattis neque id, vestibulum viverra tellus.</p>
             </div>
 
-            <button className='hvr-pulse button-img' onClick={() => scrollToComponent(this.section1, { offset: -30, align: 'top', duration: 1000})}>
+            <button className='hvr-pulse button-img' onClick={() => scrollToComponent(this.section1, { offset: -60, align: 'top', duration: 1000})}>
               <img src={buttonDown} alt="button down"/>
             </button>
         </header> 
@@ -149,7 +144,7 @@ class App extends Component {
         <section className="container my-10">
           <Row>
             <Col lg={{ size: '5'}}>
-              <h2 className='mt-10 header-2'>Lorem Ipsum Dolor Sit</h2>
+              <h2 className='mt-5 header-2'>Lorem Ipsum Dolor Sit</h2>
               <p className='mt-4 text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt. Duis velit odio, imperdiet mattis neque id, vestibulum viverra tellus.</p>
               <p className='my-4 text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt. Duis velit odio, imperdiet mattis neque id, vestibulum viverra tellus.</p>
               <Button outline color='primary' className='round-btn'> Read More </Button>
@@ -162,18 +157,18 @@ class App extends Component {
           <Row>
             <Col className="bg-red">
               <img className='hvr-grow-shadow' src="http://via.placeholder.com/250x250" alt=""/>
-              <h2 className="header-2 mt-5 mb-3">June</h2>
-              <p className='text-justify px-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt.</p>
+              <h2 className="header-2 mt-5 mb-3">Item #1</h2>
+              <p className='text-justify p-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt.</p>
             </Col>
             <Col className="bg-blue">
-              <h2 className="header-2 mt-5 mb-3">July</h2>
-              <p className='text-justify px-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt.</p>
+              <h2 className="header-2 mt-0 mb-3">Item #2</h2>
+              <p className='text-justify p-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt.</p>
               <img className='hvr-grow-shadow' src="http://via.placeholder.com/250x250" alt=""/>
             </Col>
             <Col className="bg-purple">
               <img className='hvr-grow-shadow' src="http://via.placeholder.com/250x250" alt=""/>
-              <h2 className="header-2 mt-5 mb-3">August</h2>
-              <p className='text-justify px-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt.</p>
+              <h2 className="header-2 mt-5 mb-3">Item #3</h2>
+              <p className='text-justify p-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt.</p>
             </Col>
           </Row>
         </section>
