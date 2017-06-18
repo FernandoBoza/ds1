@@ -19,11 +19,20 @@ class App extends Component {
                     isHovered: false, 
                     isHovered2: false, 
                     loaded : true,
+                    scrollBackground: 'pt-3 sticky-top nav-bg'
                   };
     
     this.toggle = this.toggle.bind(this);
     this.popState1 = this.popState1.bind(this);
     this.popState2 = this.popState2.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+
+  handleScroll(){
+    this.setState ({
+      scrollBackground: !this.state.scrollBackground
+    })
   }
 
 
@@ -67,12 +76,13 @@ class App extends Component {
       circle = isHovered ? 'circle1 open' : 'circle1';
     }
 
+    const scrollBg = this.scrollBackground ? 'nav-bg scrolling' : 'nav-bg';
     const box2 = this.state.isHovered2 ? "box2 open" : "box2";
     
     return (
       <div>
 
-      <Navbar inverse toggleable className='pt-3 sticky-top'>
+      <Navbar inverse toggleable className={this.state.scrollBackground} onScroll={this.handleScroll}>
             <NavbarToggler right onClick={this.toggle} />
             <NavbarBrand href="/">LOGO HERE</NavbarBrand>
             <Collapse isOpen={this.state.isOpen} navbar>
@@ -94,7 +104,7 @@ class App extends Component {
           </Navbar>
 
         <header className='container-fluid'>    
-            <a className="spot1" onMouseEnter={this.popState1.bind(this)} onMouseLeave={this.popState1.bind(this)}>
+            <a className="spot1" onMouseEnter={this.popState1} onMouseLeave={this.popState1}>
               <div className={circle}>
                 <div className="circle2">
                   <div className="circle3">

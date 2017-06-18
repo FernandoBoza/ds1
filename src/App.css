@@ -142,9 +142,9 @@ a {
   transition: all .5s; }
 
 nav.nav-bg {
-  background: red; }
+  background: rgba(0, 0, 0, 0.2); }
 nav.scrolling {
-  border: 5px solid #5082ff; }
+  background: rgba(0, 0, 0, 0.5); }
 nav li.nav-item {
   margin-left: 1rem; }
   nav li.nav-item a.nav-link {

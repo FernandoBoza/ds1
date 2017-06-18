@@ -20,14 +20,14 @@ a {
     transition: all .5s;
 }
 
-nav {
+nav { 
 
     &.nav-bg {
-        background: red
+        background: rgba(0, 0, 0, 0.2)
     }
 
     &.scrolling {
-        border: 5px solid $blue;
+        background: rgba(0, 0, 0, 0.5)
     }
 
     li.nav-item {
