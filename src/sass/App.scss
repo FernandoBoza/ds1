@@ -84,7 +84,7 @@ header.container-fluid {
     display: flex !important;
     position: absolute;
     border: none;
-    left: 46.7%;
+    left: 45.8%;
     top: 94%;
     &:focus {
         outline: none;
@@ -142,6 +142,14 @@ header.container-fluid {
 footer {
     .input-group {
         height: 3em;
+
+        .input-group-btn {
+            width: 50%;
+
+            button {
+                font-family: comfortaa !important;
+            }
+        }
     }
 }
 
@@ -211,6 +219,11 @@ footer {
         left: 25%;
         width: 50%;
     }
+
+    .button-img {
+        left: 44%;
+    }
+
  }
 
  // Small devices (landscape phones, 576px and up)
@@ -244,6 +257,17 @@ footer {
         width: 60%;
     }
 
+    .button-img {
+        left: 40%;
+    }
+
+    nav {
+        &.nav-bg {
+            background: rgba(254, 90, 127, 0.7);
+            transition: all .5s;
+        }
+    }
+
  }
 
 // Extra- Small devices (landscape phones, 576px and up)
@@ -264,6 +288,10 @@ footer {
         position: absolute;
         left: 13%;
         top: 26%;
+    }
+
+    .button-img {
+        left: 40%;
     }
 
  }

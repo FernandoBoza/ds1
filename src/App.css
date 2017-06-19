@@ -184,7 +184,7 @@ header.container-fluid {
   display: flex !important;
   position: absolute;
   border: none;
-  left: 46.7%;
+  left: 45.8%;
   top: 94%; }
   .button-img:focus {
     outline: none; }
@@ -233,6 +233,10 @@ header.container-fluid {
 
 footer .input-group {
   height: 3em; }
+  footer .input-group .input-group-btn {
+    width: 50%; }
+    footer .input-group .input-group-btn button {
+      font-family: comfortaa !important; }
 
 @media only screen and (max-width: 992px) {
   header.container-fluid {
@@ -279,7 +283,10 @@ footer .input-group {
   .box2 {
     top: 30%;
     left: 25%;
-    width: 50%; } }
+    width: 50%; }
+
+  .button-img {
+    left: 44%; } }
 @media only screen and (max-width: 576px) {
   header.container-fluid {
     background-position: -200px 30%;
@@ -302,7 +309,14 @@ footer .input-group {
   .box2 {
     top: 50%;
     left: 1%;
-    width: 60%; } }
+    width: 60%; }
+
+  .button-img {
+    left: 40%; }
+
+  nav.nav-bg {
+    background: rgba(254, 90, 127, 0.7);
+    transition: all .5s; } }
 @media only screen and (max-width: 400px) {
   header.container-fluid {
     background-position: -241px 30%;
@@ -316,6 +330,9 @@ footer .input-group {
   .spot1 {
     position: absolute;
     left: 13%;
-    top: 26%; } }
+    top: 26%; }
+
+  .button-img {
+    left: 40%; } }
 
 /*# sourceMappingURL=App.css.map */

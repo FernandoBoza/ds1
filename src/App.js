@@ -192,12 +192,12 @@ class App extends Component {
         </section>
 
         <footer className='container-fluid bg-faded'>
-          <Col lg={{ size: 10, offset: 1 }} className='my-10 py-5 bg-faded'>
+          <Col lg={{ size: 8, offset: 2 }} className='my-10 py-5 bg-faded'>
             <h1 className='header-2'>Join The Lorem Ipsum Club</h1>
             <p className='text-center'>Subscribe and save 50% on your first purchase </p>
             <InputGroup>
               <Input placeholder="What's Your Email?"/>
-              <InputGroupAddon>To the Left!</InputGroupAddon>
+              {/*<InputGroupAddon>To the Left!</InputGroupAddon>*/}
               <InputGroupButton color="danger">Submit</InputGroupButton>
             </InputGroup>
           </Col>
