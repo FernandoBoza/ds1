@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import scrollToComponent from 'react-scroll-to-component';
 
 import { Row, Col, Button } from 'reactstrap';
-import { InputGroup, InputGroupButton, Input, InputGroupAddon } from 'reactstrap';
+import { InputGroup, Input } from 'reactstrap';
 import { Collapse, Navbar, NavbarBrand, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
 
 import buttonDown from './img/button.png';
@@ -23,11 +23,13 @@ class App extends Component {
                     isHovered2: false, 
                     loaded : true,
                     isTop: true,
+                    submitBar: false,
                   };
     
     this.toggle = this.toggle.bind(this);
     this.popState1 = this.popState1.bind(this);
     this.popState2 = this.popState2.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
    }
 
   componentDidMount() {
@@ -62,9 +64,20 @@ class App extends Component {
         isHovered2: !this.state.isHovered2
     });
 }
+  
+  handleSubmit(){
+    this.setState({
+        submitBar: !this.state.submitBar
+    });
+}
 
   render() {
 
+    const submitBarClass = this.state.submitBar ? 'input-group-btn x' : 'input-group-btn';
+    const afterSubmit = this.state.submitBar ? 'afterSubmitClick' : '';
+    const confirmMessage = this.state.submitBar ? 'Thank You' : 'Submit';
+
+    const box2 = this.state.isHovered2 ? "box2 open" : "box2";
     const {loaded, isHovered} = this.state;
     let box;
     let circle;
@@ -76,8 +89,6 @@ class App extends Component {
       box = isHovered ? 'box open' : 'box';
       circle = isHovered ? 'circle1 open' : 'circle1';
     }
-
-    const box2 = this.state.isHovered2 ? "box2 open" : "box2";
     
     return (
       <div>
@@ -196,9 +207,10 @@ class App extends Component {
             <h1 className='header-2'>Join The Lorem Ipsum Club</h1>
             <p className='text-center'>Subscribe and save 50% on your first purchase </p>
             <InputGroup>
-              <Input placeholder="What's Your Email?"/>
-              {/*<InputGroupAddon>To the Left!</InputGroupAddon>*/}
-              <InputGroupButton color="danger">Submit</InputGroupButton>
+              <Input placeholder="What's Your Email?" className={afterSubmit} required/>
+              <div className={submitBarClass}>
+                <Button color="danger" onClick={this.handleSubmit}>{confirmMessage}</Button>
+              </div>
             </InputGroup>
           </Col>
         </footer>

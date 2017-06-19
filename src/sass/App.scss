@@ -142,9 +142,20 @@ header.container-fluid {
 footer {
     .input-group {
         height: 3em;
+        
+        .afterSubmitClick {
+            padding: 0 0 !important;
+            width: 0;
+            transition: all .5s .5s;
+        }
 
         .input-group-btn {
             width: 50%;
+            transition: width 1s;
+
+            &.x {
+                width: 100% !important;
+            }
 
             button {
                 font-family: comfortaa !important;
@@ -152,7 +163,6 @@ footer {
         }
     }
 }
-
 
 
 
