@@ -16,9 +16,8 @@
 .env.test.local
 .env.production.local
 
-/src/*.css.map
-/src/sass/.sass-cache
-.map
+
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
