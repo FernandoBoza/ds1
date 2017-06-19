@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import scrollToComponent from 'react-scroll-to-component';
 
-import { Row, Col } from 'reactstrap';
+import { Row, Col, Button } from 'reactstrap';
+import { InputGroup, InputGroupButton, Input, InputGroupAddon } from 'reactstrap';
 import { Collapse, Navbar, NavbarBrand, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
-import { Button } from 'reactstrap';
 
 import buttonDown from './img/button.png';
 import rayBlueGreen from './img/img1.png';
+
+import WOW from 'wowjs';
+import 'animate.css/animate.css';
 
 import './App.css';
 
@@ -31,6 +34,7 @@ class App extends Component {
     document.addEventListener('scroll', () => {
       this.setState({ isTop: window.scrollY < 550 })
     });
+      new WOW.WOW().init();
   }
 
   toggle() {
@@ -98,7 +102,7 @@ class App extends Component {
         </Collapse>
       </Navbar>
 
-        <header className='container-fluid'>    
+        <header className='container-fluid wow fadeInLeft' data-wow-duration="1000ms" data-wow-delay="300ms">   
             <a className="spot1" onMouseEnter={this.popState1} onMouseLeave={this.popState1}>
               <div className={circle}>
                 <div className="circle2">
@@ -134,7 +138,7 @@ class App extends Component {
             </button>
         </header> 
 
-        <section className="container my-10" ref={(section) => { this.section1 = section; }}>
+        <section className="container my-10 wow fadeIn" data-wow-duration="1000ms" data-wow-delay="1000ms" ref={(section) => { this.section1 = section; }}>
           <Row>
             <Col lg={{ size:5, offset: 1 }}><h1 className='header-2'>Lorem Ipsum Dolor Sit, Amet Consectetur</h1></Col>
             <Col lg={{size: 4 }}><p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt. </p></Col>
@@ -143,35 +147,59 @@ class App extends Component {
 
         <section className="container my-10">
           <Row>
-            <Col lg={{ size: '5'}}>
-              <h2 className='mt-5 header-2'>Lorem Ipsum Dolor Sit</h2>
+            <Col lg={{ size: '4', offset: 1}} className="wow bounceInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <h1 className='mt-5 header-2'>Lorem Ipsum Dolor Sit</h1>
               <p className='mt-4 text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt. Duis velit odio, imperdiet mattis neque id, vestibulum viverra tellus.</p>
               <p className='my-4 text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt. Duis velit odio, imperdiet mattis neque id, vestibulum viverra tellus.</p>
               <Button outline color='primary' className='round-btn'> Read More </Button>
             </Col>
-            <Col lg={{ offset: 1}}><img src={rayBlueGreen} alt=""/></Col>
+            <Col lg={{ offset: 1}} className="wow bounceInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <img src={rayBlueGreen} alt=""/>
+            </Col>
           </Row>
         </section>
 
         <section className="container-fluid my-10">
           <Row>
-            <Col className="bg-red">
+            <Col className="bg-red wow bounceInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
               <img className='hvr-grow-shadow' src="http://via.placeholder.com/250x250" alt=""/>
               <h2 className="header-2 mt-5 mb-3">Item #1</h2>
               <p className='text-justify p-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt.</p>
             </Col>
-            <Col className="bg-blue">
+            <Col className="bg-blue wow bounceInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
               <h2 className="header-2 mt-0 mb-3">Item #2</h2>
               <p className='text-justify p-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt.</p>
               <img className='hvr-grow-shadow' src="http://via.placeholder.com/250x250" alt=""/>
             </Col>
-            <Col className="bg-purple">
+            <Col className="bg-purple wow bounceInUp" data-wow-duration="1000ms" data-wow-delay="700ms">
               <img className='hvr-grow-shadow' src="http://via.placeholder.com/250x250" alt=""/>
               <h2 className="header-2 mt-5 mb-3">Item #3</h2>
               <p className='text-justify p-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt.</p>
             </Col>
           </Row>
         </section>
+
+        <section className="container my-10">
+          <Row>
+            <Col lg={{ size: 4, offset: 1}} className='bg-purple rounded'></Col>
+            <Col lg={{ size: 5, offset: 1}}>
+              <img className='img-fluid rounded' src="http://via.placeholder.com/570x350" alt=""/>
+              <h1 className='header-2 mt-6'>Lorem Ipsum Dolor</h1>
+              <p className='my-4'>Praesent vel elementum dui. Nulla id tellus quis risus vehicula iaculis. Pellentesque faucibus nisl justo, varius ornare augue bibendum pretium.</p>
+              <Button outline color='primary round-btn'>Lorem Ipsum Dolor</Button>
+            </Col>
+          </Row>
+        </section>
+
+        <footer className='container-fluid bg-faded'>
+          <Col lg={{ size: 10, offset: 1 }} className='my-10 py-5 bg-faded'>
+            <InputGroup>
+              <Input placeholder='Email Here ...'/>
+              <InputGroupAddon>To the Left!</InputGroupAddon>
+              <InputGroupButton color="danger">Submit</InputGroupButton>
+            </InputGroup>
+          </Col>
+        </footer>
 
       </div>
     );
