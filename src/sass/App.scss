@@ -29,19 +29,6 @@ nav {
 
     &.scrolling {
         background: rgba(254, 90, 127, 0.7);
-        // &:after {
-        //     content  : "";
-        //     position : absolute;
-        //     z-index  : 1;
-        //     bottom   : 0;
-        //     left     : 0;
-        //     pointer-events   : none;
-        //     background-image : linear-gradient(to bottom, 
-        //                         rgba(255,255,255, 0), 
-        //                         rgba(255,255,255, .5) 100%);
-        //     width    : 100%;
-        //     height   : 4em;
-        // }
 
         li.nav-item {
         margin-left: 1rem;
@@ -73,13 +60,15 @@ nav {
 
 header.container-fluid {
     background-image: url(./img/backgroundHeader2.jpg);
-    background-position: 0% 35%;
-    background-size: cover;
+    // background-attachment: fixed;
+    // background-position: cover;
     background-repeat: no-repeat;
-    height: 90vh;
+    background-position: 0% 30%;
+    background-size: 100% 100%;
     position: relative;
+    height: 90vh;
     top: -64px;
-    // z-index: -100;
+
 }
 
 .btn {
@@ -92,10 +81,11 @@ header.container-fluid {
 
 .button-img {
     background-color: transparent;
-    border: none;
+    display: flex !important;
     position: absolute;
+    border: none;
+    left: 46.7%;
     top: 94%;
-    right: 45%;
     &:focus {
         outline: none;
     }
@@ -148,3 +138,132 @@ header.container-fluid {
 .hvr-underline-from-center:before {
     background: $blue !important;
 }
+
+footer {
+    .input-group {
+        height: 3em;
+    }
+}
+
+
+
+
+
+
+// Large devices (desktops, 992px and up)
+@media only screen and  (max-width: 992px) { 
+     header.container-fluid {
+        background-position: -231px 30%;
+        background-size: 140% 100%;
+    }
+
+    .box {
+        top: 12%;
+        left: 18%;
+        width: 60%;
+    }
+
+    .spot1 {
+        left: 33%;
+        top: 26%;
+    }
+
+    .spot2 {
+        position: absolute;
+        left: 40%;
+        top: 50%;
+    }
+
+    .box2 {
+        top: 30%;
+        left: 22%;
+        width: 60%;
+    }
+ }
+
+ // Medium devices (tablets, 768px and up)
+@media only screen and  (max-width: 768px) { 
+
+    header.container-fluid {
+        background-position: -231px 30%;
+        background-size: 174% 100%;
+    }
+
+    .box {
+        top: 12%;
+        left: 22%;
+        width: 60%;
+    }
+
+    .spot1 {
+        left: 35%;
+        top: 26%;
+    }
+
+    .spot2 {
+        position: absolute;
+        left: 44%;
+        top: 45%;
+    }
+
+    .box2 {
+        top: 30%;
+        left: 25%;
+        width: 50%;
+    }
+ }
+
+ // Small devices (landscape phones, 576px and up)
+@media only screen and  (max-width: 576px) { 
+
+    header.container-fluid {
+        background-position: -200px 30%;
+        background-size: 280% 100%;
+    }
+
+    .box {
+        top: 22%;
+        left: 10%;
+        width: 60%;
+    }
+
+    .spot1 {
+        left: 19%;
+        top: 26%;
+    }
+
+    .spot2 {
+        position: absolute;
+        left: 10%;
+        top: 50%;
+    }
+
+    .box2 {
+        top: 50%;
+        left: 1%;
+        width: 60%;
+    }
+
+ }
+
+// Extra- Small devices (landscape phones, 576px and up)
+@media only screen and  (max-width: 400px) { 
+
+    header.container-fluid {
+        background-position: -241px 30%;
+        background-size: 320% 100%;
+    }
+
+    .box {
+        top: 20%;
+        left: 7%;
+        width: 68%;
+    }
+
+    .spot1 {
+        position: absolute;
+        left: 13%;
+        top: 26%;
+    }
+
+ }

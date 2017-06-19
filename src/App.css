@@ -19,6 +19,10 @@ p {
   color: white;
   text-align: center; }
 
+footer.bg-faded .header-2 {
+  color: #4d4d4d;
+  text-align: center; }
+
 .box p, .box2 p {
   color: white; }
 
@@ -29,13 +33,13 @@ p {
 
 .spot1 {
   position: absolute;
-  left: 43%;
+  left: 41%;
   top: 26%; }
 
 .spot2 {
   position: absolute;
-  left: 50%;
-  top: 50%; }
+  left: 48%;
+  top: 48%; }
 
 .circle1 {
   border: 2px solid #5082ff;
@@ -92,7 +96,7 @@ p {
   line-height: 30px;
   color: white;
   overflow: hidden;
-  top: 6%;
+  top: 9%;
   left: 16%; }
   .box.open {
     height: 11rem;
@@ -111,7 +115,7 @@ p {
   line-height: 30px;
   color: white;
   overflow: hidden;
-  top: 30%;
+  top: 40%;
   left: 22%; }
   .box2.open {
     height: 11rem;
@@ -163,11 +167,11 @@ nav li.nav-item {
 
 header.container-fluid {
   background-image: url(./img/backgroundHeader2.jpg);
-  background-position: 0% 35%;
-  background-size: cover;
   background-repeat: no-repeat;
-  height: 90vh;
+  background-position: 0% 30%;
+  background-size: 100% 100%;
   position: relative;
+  height: 90vh;
   top: -64px; }
 
 .btn:hover, .btn:focus {
@@ -177,10 +181,11 @@ header.container-fluid {
 
 .button-img {
   background-color: transparent;
-  border: none;
+  display: flex !important;
   position: absolute;
-  top: 94%;
-  right: 45%; }
+  border: none;
+  left: 46.7%;
+  top: 94%; }
   .button-img:focus {
     outline: none; }
   .button-img:hover {
@@ -225,5 +230,92 @@ header.container-fluid {
 
 .hvr-underline-from-center:before {
   background: #5082ff !important; }
+
+footer .input-group {
+  height: 3em; }
+
+@media only screen and (max-width: 992px) {
+  header.container-fluid {
+    background-position: -231px 30%;
+    background-size: 140% 100%; }
+
+  .box {
+    top: 12%;
+    left: 18%;
+    width: 60%; }
+
+  .spot1 {
+    left: 33%;
+    top: 26%; }
+
+  .spot2 {
+    position: absolute;
+    left: 40%;
+    top: 50%; }
+
+  .box2 {
+    top: 30%;
+    left: 22%;
+    width: 60%; } }
+@media only screen and (max-width: 768px) {
+  header.container-fluid {
+    background-position: -231px 30%;
+    background-size: 174% 100%; }
+
+  .box {
+    top: 12%;
+    left: 22%;
+    width: 60%; }
+
+  .spot1 {
+    left: 35%;
+    top: 26%; }
+
+  .spot2 {
+    position: absolute;
+    left: 44%;
+    top: 45%; }
+
+  .box2 {
+    top: 30%;
+    left: 25%;
+    width: 50%; } }
+@media only screen and (max-width: 576px) {
+  header.container-fluid {
+    background-position: -200px 30%;
+    background-size: 280% 100%; }
+
+  .box {
+    top: 22%;
+    left: 10%;
+    width: 60%; }
+
+  .spot1 {
+    left: 19%;
+    top: 26%; }
+
+  .spot2 {
+    position: absolute;
+    left: 10%;
+    top: 50%; }
+
+  .box2 {
+    top: 50%;
+    left: 1%;
+    width: 60%; } }
+@media only screen and (max-width: 400px) {
+  header.container-fluid {
+    background-position: -241px 30%;
+    background-size: 320% 100%; }
+
+  .box {
+    top: 20%;
+    left: 7%;
+    width: 68%; }
+
+  .spot1 {
+    position: absolute;
+    left: 13%;
+    top: 26%; } }
 
 /*# sourceMappingURL=App.css.map */

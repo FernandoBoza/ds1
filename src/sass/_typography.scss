@@ -27,6 +27,13 @@ p {
     }
 }
 
+footer.bg-faded {
+    .header-2 {
+        color: lighten(black,30%);
+        text-align: center;
+    }
+}
+
 .box, .box2 {
     p{
         color: white;

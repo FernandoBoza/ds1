@@ -1,13 +1,13 @@
 .spot1 {
     position: absolute;
-    left: 43%;
+    left: 41%;
     top: 26%;
 }
 
 .spot2 {
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 48%;
+    top: 48%;
 }
 
 .circle1 {
@@ -64,7 +64,7 @@
     @include popUp();
     @include width-height(38%, 0px);
     @include box();
-    top: 6%;
+    top: 9%;
     left: 16%;
     &.open {
         @include height-opacity(11rem, 1);
@@ -76,7 +76,7 @@
   @include popUp();
   @include width-height(38%, 0px);
   @include box();
-  top: 30%;
+  top: 40%;
   left: 22%;
   &.open {
     @include height-opacity(11rem, 1);

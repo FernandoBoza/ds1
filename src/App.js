@@ -115,7 +115,7 @@ class App extends Component {
             <div className={box}>
               <h4 className='item-num'>#1253</h4>
               <h4 className='popUpTitle'>Lunettes De Soleil</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt. Duis velit odio, imperdiet mattis neque id, vestibulum viverra tellus.</p>
+              <p className='hidden-sm-down'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt. Duis velit odio, imperdiet mattis neque id, vestibulum viverra tellus.</p>
             </div>
 
             <a className="spot2" onMouseEnter={this.popState2} onMouseLeave={this.popState2}>
@@ -130,7 +130,7 @@ class App extends Component {
             <div className={box2}>
               <h4 className='item-num'>#4087</h4>
               <h4 className='popUpTitle'>Costume Bleu Homme</h4>
-              <p className='pl-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt. Duis velit odio, imperdiet mattis neque id, vestibulum viverra tellus.</p>
+              <p className='hidden-sm-down'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt. Duis velit odio, imperdiet mattis neque id, vestibulum viverra tellus.</p>
             </div>
 
             <button className='hvr-pulse button-img' onClick={() => scrollToComponent(this.section1, { offset: -60, align: 'top', duration: 1000})}>
@@ -153,7 +153,7 @@ class App extends Component {
               <p className='my-4 text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt. Duis velit odio, imperdiet mattis neque id, vestibulum viverra tellus.</p>
               <Button outline color='primary' className='round-btn'> Read More </Button>
             </Col>
-            <Col lg={{ offset: 1}} className="wow bounceInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <Col lg={{ offset: 1}} className="wow bounceInRight hidden-md-down" data-wow-duration="1000ms" data-wow-delay="300ms">
               <img src={rayBlueGreen} alt=""/>
             </Col>
           </Row>
@@ -161,17 +161,17 @@ class App extends Component {
 
         <section className="container-fluid my-10">
           <Row>
-            <Col className="bg-red wow bounceInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <Col md={{size: 4}} sm={{ size: 12 }} className="bg-red wow bounceInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
               <img className='hvr-grow-shadow' src="http://via.placeholder.com/250x250" alt=""/>
               <h2 className="header-2 mt-5 mb-3">Item #1</h2>
               <p className='text-justify p-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt.</p>
             </Col>
-            <Col className="bg-blue wow bounceInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+            <Col md={{size: 4}} sm={{ size: 12 }} className="bg-blue wow bounceInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
               <h2 className="header-2 mt-0 mb-3">Item #2</h2>
               <p className='text-justify p-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt.</p>
               <img className='hvr-grow-shadow' src="http://via.placeholder.com/250x250" alt=""/>
             </Col>
-            <Col className="bg-purple wow bounceInUp" data-wow-duration="1000ms" data-wow-delay="700ms">
+            <Col md={{size: 4}} sm={{ size: 12 }} className="bg-purple wow bounceInUp" data-wow-duration="1000ms" data-wow-delay="700ms">
               <img className='hvr-grow-shadow' src="http://via.placeholder.com/250x250" alt=""/>
               <h2 className="header-2 mt-5 mb-3">Item #3</h2>
               <p className='text-justify p-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat velit non ullamcorper tincidunt.</p>
@@ -193,8 +193,10 @@ class App extends Component {
 
         <footer className='container-fluid bg-faded'>
           <Col lg={{ size: 10, offset: 1 }} className='my-10 py-5 bg-faded'>
+            <h1 className='header-2'>Join The Lorem Ipsum Club</h1>
+            <p className='text-center'>Subscribe and save 50% on your first purchase </p>
             <InputGroup>
-              <Input placeholder='Email Here ...'/>
+              <Input placeholder="What's Your Email?"/>
               <InputGroupAddon>To the Left!</InputGroupAddon>
               <InputGroupButton color="danger">Submit</InputGroupButton>
             </InputGroup>
