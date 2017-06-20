@@ -16,7 +16,8 @@
 .env.test.local
 .env.production.local
 
-
+*.scssc
+*.css.map
 
 npm-debug.log*
 yarn-debug.log*

@@ -2,16 +2,16 @@ p {
   color: #666666; }
 
 .quicksand {
-  font-family: Quicksand !important; }
+  font-family: 'Quicksand', sans-serif !important; }
 
 .comfortaa {
-  font-family: Comfortaa !important; }
+  font-family: 'Comfortaa', cursive !important; }
 
 .lato {
-  font-family: Lato !important; }
+  font-family: 'Lato', sans-serif !important; }
 
 .header-2 {
-  font-family: 'Lobster 1.4';
+  font-family: 'Lobster', cursive;
   word-spacing: 5px;
   color: #4d4d4d; }
 
@@ -140,7 +140,7 @@ footer.bg-faded .header-2 {
 body {
   font-family: Comfortaa !important; }
   body button, body input, body optgroup, body select, body textarea {
-    font-family: Quicksand !important; }
+    font-family: 'Quicksand', sans-serif !important; }
 
 a {
   transition: all .5s; }
@@ -243,7 +243,7 @@ footer .input-group {
     footer .input-group .input-group-btn.x {
       width: 100% !important; }
     footer .input-group .input-group-btn button {
-      font-family: comfortaa !important; }
+      font-family: 'Comfortaa', cursive !important; }
 
 @media only screen and (max-width: 992px) {
   header.container-fluid {
