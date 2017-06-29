@@ -213,6 +213,8 @@ class App extends Component {
               </div>
             </InputGroup>
           </Col>
+
+          <p className='footer'>Made with <span className="heartbeat" role="img" aria-label="heart">❤️</span> by <a href="http://fernandoboza.com" target='_blank' rel="noopener noreferrer">Fernando B</a></p>
         </footer>
 
       </div>
