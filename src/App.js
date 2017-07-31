@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import scrollToComponent from 'react-scroll-to-component';
 
+// React-Strap Components
 import { Row, Col, Button } from 'reactstrap';
 import { InputGroup, Input } from 'reactstrap';
 import { Collapse, Navbar, NavbarBrand, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
 
+// Img Imports
 import buttonDown from './img/button.png';
 import rayBlueGreen from './img/img1.png';
 
+// CSS/JS Libraries
 import WOW from 'wowjs';
 import 'animate.css/animate.css';
-
 import './App.css';
 
 class App extends Component {
